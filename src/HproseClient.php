@@ -16,6 +16,11 @@ use const Zipkin\Tags\HTTP_STATUS_CODE;
 
 class HproseClient extends Client
 {
+    public function __construct($uris = null, $async = true)
+    {
+        parent::__construct($uris, $async);
+    }
+
     /**
      * @param $request
      * @param stdClass $context
