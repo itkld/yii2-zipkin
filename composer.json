@@ -5,7 +5,7 @@
     "type": "library",
     "require": {
 		"yiisoft/yii2": ">=2.0.10",
-        "luoxiaojun/yii2-zipkin": "dev-master",
+        "luoxiaojun/yii2-zipkin": "@dev",
         "hprose/hprose-yii": "v2.0.5"
     },
     "require-dev": {
