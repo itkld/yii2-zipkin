@@ -1,6 +1,6 @@
 <?php
 
-namespace Lxj\Yii2\Zipkin;
+namespace Itkld\Yii2\Zipkin;
 
 use yii\base\Component;
 use yii\base\ErrorException;

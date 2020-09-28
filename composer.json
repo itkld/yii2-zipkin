@@ -20,13 +20,13 @@
         }
     ],
     "autoload": {
-        "psr-4": {"Lxj\\Yii2\\Zipkin\\": "src/"}
+        "psr-4": {"Itkld\\Yii2\\Zipkin\\": "src/"}
     },
     "extra": {
         "yii\\composer\\Installer::postInstall": {
             "copyFiles": [
                 {
-                    "vendor/luoxiaojun/yii2-zipkin/src/hack/Client.php": ["vendor/hprose/hprose/src/Hprose/Http/Client.php", true]
+                    "vendor/itkld/hprose-zipkin/src/hack/Client.php": ["vendor/hprose/hprose/src/Hprose/Http/Client.php", true]
                 }
             ]
         }
