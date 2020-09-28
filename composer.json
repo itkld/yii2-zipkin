@@ -1,13 +1,12 @@
 {
-    "name": "luoxiaojun/yii2-zipkin",
-    "description": "Zipkin in Yii2",
-    "keywords": ["zipkin", "yii2"],
+    "name": "itkld/hprose-zipkin",
+    "description": "Zipkin for hprose in Yii2",
+    "keywords": ["zipkin", "hprose", "yii2"],
     "type": "library",
     "require": {
-        "openzipkin/zipkin": "1.3.2",
-        "psr/http-message": "^1.0",
-        "guzzlehttp/guzzle": "^6.3",
-        "hprose/hprose-yii": "v2.0.5"
+		"yiisoft/yii2": ">=2.0.10",
+        "luoxiaojun/yii2-zipkin": "dev-master",
+        "hprose/hprose-yii": "v2.0.5",
     },
     "require-dev": {
         "phpunit/phpunit": "~7.5",
@@ -16,8 +15,8 @@
     "license": "apache-2.0",
     "authors": [
         {
-            "name": "luoxiaojun",
-            "email": "luoxiaojun1992@sina.cn"
+            "name": "itkld",
+            "email": "itkld@kalading.com"
         }
     ],
     "autoload": {
