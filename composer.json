@@ -6,7 +6,7 @@
     "require": {
 		"yiisoft/yii2": ">=2.0.10",
         "luoxiaojun/yii2-zipkin": "dev-master",
-        "hprose/hprose-yii": "v2.0.5",
+        "hprose/hprose-yii": "v2.0.5"
     },
     "require-dev": {
         "phpunit/phpunit": "~7.5",
