@@ -9,6 +9,7 @@ use Hprose\Http\Client;
 use stdClass;
 use yii\console\Application;
 use Zipkin\Span;
+use Lxj\Yii2\Zipkin\Tracer;
 use const Zipkin\Tags\HTTP_HOST;
 use const Zipkin\Tags\HTTP_METHOD;
 use const Zipkin\Tags\HTTP_PATH;

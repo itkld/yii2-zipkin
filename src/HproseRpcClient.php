@@ -5,6 +5,7 @@ namespace Itkld\Yii2\Zipkin;
 use yii\base\Component;
 use yii\base\ErrorException;
 use yii\base\Event;
+use yii\base\Exception;
 use yii\httpclient\Client as HttpClient;
 use yii\httpclient\CurlTransport;
 
@@ -66,6 +67,18 @@ class HproseRpcClient extends Component
         }
     }
 
+    private function hackHprose() {
+        $distFilePath = \Yii::$app->getVendorPath() . '/hprose/hprose/src/Hprose/Http/Client.php';
+        $newContent = file_get_contents(__DIR__ . '/hack/Client.php');
+        $oldContent = file_get_contents($distFilePath);
+
+        if($newContent != $oldContent) {
+            if(!file_put_contents($distFilePath, $newContent)) {
+                throw new Exception("can not hack file ${$distFilePath}");
+            }
+        }
+    }
+
     /**
      * 查找服务
      * @param $service
@@ -75,6 +88,7 @@ class HproseRpcClient extends Component
      */
     public function getService($service, $async = false)
     {
+        $this->hackHprose();
         if ($async) {
             $group = 'async';
         } else {
